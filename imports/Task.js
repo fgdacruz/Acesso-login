@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Tasks } from '../tasks.js';
+import { Tasks } from '../import/tasks.js';
+import { Template } from 'meteor/templating';
+import { ReactiveDict } from 'meteor/reactive-dict';
+ 
+
+    Tasks.insert({
+      text,
+      createdAt: new Date(), // current time
+      owner: Meteor.userId(),
+      username: Meteor.user().username,
+    });
+ 
+    // Clear form
 
 // Task component - represents a single todo item
 export default class Task extends Component {

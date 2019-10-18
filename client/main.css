@@ -3,13 +3,14 @@ body {
   background-color: #800080;
   background-image: linear-gradient(to bottom, #ffffff, #73358b 100%);
   background-attachment: fixed;
-  position: center;
+  position: absolute;
   top: 0;
   bottom: 0;
-body {
+
+  position: center;
   padding: 10px;
   font-family: sans-serif;
-}
+
   left: 0;
   right: 0;
   padding: 0;

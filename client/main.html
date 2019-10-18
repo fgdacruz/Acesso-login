@@ -3,16 +3,33 @@
 </head>
 
 <body>
-  <h1>Welcome Felipe!</h1>
+    
+  <h1>Bem vindo Felipe!</h1>
 
   {{> hello}}
   {{> info}}
   {{> loginButtons}}
+
+  
+
+  <header>
+      <h1>Todo List</h1>
+ 
+      <label class="hide-completed">
+        <input type="checkbox" />
+        Hide Completed Tasks
+      </label>
+ 
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new tasks" />
+      </form>
+     
+  </header>            
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+  
+  <p>Atividade 1 - Projeto de Desenvolvimento de Software</p>
 </template>
 
 <template name="info">

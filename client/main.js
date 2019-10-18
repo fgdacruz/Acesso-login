@@ -1,8 +1,14 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-
+/*import '../imports/ui/body.js';*/
+import '../imports/startup/accounts-config.js';
 import './main.html';
-import '../clients/accounts-config.js'
+
+import { Accounts } from 'meteor/accounts-base';
+ 
+Accounts.ui.config({
+  passwordSignupFields: 'USERNAME_ONLY',
+});
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
   this.counter = new ReactiveVar(0);
